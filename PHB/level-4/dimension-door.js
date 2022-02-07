@@ -2,10 +2,11 @@
 //Credit to david (aka claudekennilol) for initial Pathfinder version and Tupsi for initial 5e version
 
 Sequencer.Preloader.preloadForClients(
-    "jb2a.magic_signs.circle.02.conjuration.intro.red",
-    "jb2a.portals.vertical.vortex.red",
-    "jb2a.magic_signs.circle.02.conjuration.intro.blue",
-    "jb2a.portals.vertical.vortex.blue")
+    ["jb2a.magic_signs.circle.02.conjuration.intro.red",
+        "jb2a.portals.vertical.vortex.red",
+        "jb2a.magic_signs.circle.02.conjuration.intro.blue",
+        "jb2a.portals.vertical.vortex.blue"
+    ], false)
 
 let tokenD = canvas.tokens.get(args[0].tokenId);
 
