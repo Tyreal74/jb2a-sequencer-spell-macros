@@ -10,12 +10,12 @@ if (!casterToken) {
     return;
 }
 //get the template id from the canvas and its positions.
-let fireTemplate = canvas.templates.get(args[0].templateId);
-let templatePosition = fireTemplate.position;
+let Template = canvas.templates.get(args[0].templateId);
+let templatePosition = Template.position;
 //get an array of the targets within the tempalte area.
 const targetLocations = Array.from(game.user.targets);
 
-await fireTemplate.document.delete();
+await Template.document.delete();
 
 let sequence = new Sequence()
 
