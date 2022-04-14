@@ -11,6 +11,15 @@ let target = Array.from(game.user.targets)[0];
 new Sequence()
 
 .effect()
+    .file("jb2a.extras.tmfx.runes.circle.outpulse.evocation")
+    .atLocation(casterToken)
+    .duration(1500)
+    .fadeIn(500)
+    .fadeOut(500)
+    .scale(0.5)
+    .waitUntilFinished(-1200)
+
+.effect()
     .file("jb2a.rapier.melee.01.orange.4")
     .atLocation(casterToken)
     .stretchTo(target)
@@ -30,6 +39,7 @@ new Sequence()
     .fadeOut(500)
     .persist()
     .scaleToObject(1.2)
+    .name(`booming-blade-${target.id}`)
     .playIf(args[0].hitTargets.length === 1)
 
 .play()
