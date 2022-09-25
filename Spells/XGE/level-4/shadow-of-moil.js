@@ -1,7 +1,7 @@
 await Sequencer.Preloader.preloadForClients([
     "jb2a.energy_strands.complete.dark_red.01",
     "jb2a.darkness.black",
-    "jb2a.fire_ring.500px.red"
+    "jb2a.shield_themed.above.fire.03.orange"
 ], false)
 
 const casterToken = canvas.tokens.get(args[0].tokenId);
@@ -25,8 +25,8 @@ new Sequence()
 
 .effect()
     .fadeIn(500)
+    .fadeOut(500)
     .file("jb2a.energy_strands.complete.dark_red.01")
-    .persist()
     .scale(0.4)
     .attachTo(casterToken)
     .name(`ShadowOfMoil_${casterToken.data._id}`)
@@ -42,12 +42,27 @@ new Sequence()
     .attachTo(casterToken)
     .name(`ShadowOfMoilDarkness_${casterToken.data._id}`)
 
-.effect()
-    .file("jb2a.fire_ring.500px.red")
-    .attachTo(casterToken)
-    .fadeIn(100)
+    
+    .effect()
+    .fadeIn(500)
+    .file("jb2a.shield_themed.above.fire.03.orange")
+   
     .scaleToObject(1.25)
-    .name(`FireRing_ShadowOfMoil_${casterToken.data._id}`)
     .persist()
+    .attachTo(casterToken)
+    .name(`ShadowOfMoilShield_${casterToken.data._id}`)
+
+
+    .effect()
+    .fadeIn(500)
+    .file("jb2a.shield_themed.above.fire.03.orange")
+    
+    .randomRotation()
+    .filter("ColorMatrix", {saturate: 1})
+    .tint("#431c53")
+    .scaleToObject(1.25)
+    .persist()
+    .attachTo(casterToken)
+    .name(`ShadowOfMoilShield_${casterToken.data._id}`)
 
 .play();

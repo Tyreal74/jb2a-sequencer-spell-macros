@@ -19,7 +19,7 @@ let targetHit = args[0].hitTargets.length === 1;
 new Sequence()
 
 .effect()
-    .file("jb2a.scimitar.melee.01.purple")
+    .file("jb2a.scimitar.melee.01.purple")   //change to weapon of choice
     .atLocation(casterToken)
     .stretchTo(target)
     .waitUntilFinished(-500)
