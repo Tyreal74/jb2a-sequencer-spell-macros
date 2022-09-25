@@ -1,3 +1,10 @@
+await Sequencer.Preloader.preloadForClients(
+    ["jb2a.extras.tmfx.inpulse.circle.03",
+        "jb2a.energy_strands.complete.orange.01",
+        "jb2a.icon.fear.orange"
+    ], false)
+
+
 const casterToken = canvas.tokens.get(args[0].tokenId);
 
 if (!casterToken) {
@@ -11,9 +18,6 @@ let target = Array.from(game.user.targets)[0];
 //let targetSave = args[0].saves.length === 1;
 
 new Sequence()
-
-.sound()
-    .file("/worlds/doip/sounds/dragonroar.mp3")
 
 .effect()
     .file("jb2a.extras.tmfx.inpulse.circle.03")
