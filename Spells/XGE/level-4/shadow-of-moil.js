@@ -44,7 +44,7 @@ new Sequence()
 
 .effect()
     .file("jb2a.fire_ring.500px.red")
-    .atLocation(casterToken)
+    .attachTo(casterToken)
     .fadeIn(100)
     .scaleToObject(1.25)
     .name(`FireRing_ShadowOfMoil_${casterToken.data._id}`)
